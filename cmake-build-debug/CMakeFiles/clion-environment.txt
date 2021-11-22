@@ -1,4 +1,0 @@
-ToolSet: w64 6.0 (local)@d:\Data\JetBrains\CLion\Toolchains\mingw64
-Options: 
-
-Options:
