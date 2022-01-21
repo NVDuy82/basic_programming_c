@@ -1,33 +1,33 @@
 #include <stdio.h>
 
+struct SV{
+  int msv;
+  char hoten[30];
+  char khoa;
+  float diem;
+};
+
 int main() {
   int n;
   printf("Nhap n: ");
   scanf("%d", &n);
-  float arr[n];
+  struct SV sv[n];
 
   for(int i = 0; i < n; ++i){    
-    printf("Nhap so thu %d: ", i + 1);
-    scanf("%f", &arr[i]);
+    printf("Nhap ma sinh vien cho sv thu %d: ", i + 1);
+    scanf("%d", &sv[i].msv);
+    printf("Nhap ho ten cho sv thu %d: ", i + 1);
+    scanf("%s", sv[i].hoten);
+    printf("Nhap khoa cho sv thu %d: ", i + 1);    
+    scanf("%c", &sv[i].khoa);
+    printf("Nhap diem cho sv thu %d: ", i + 1);
+    scanf("%f", &sv[i].diem);
   }
 
-  printf("Day vua nhap la: ");
-  for(int i = 0; i < n; ++i){    
-    printf("%.2f  ", arr[i]);
-  }
-
-  printf("\n Trung binh cong cac so chia het cho 3 hoac 4: ");
-  float sum;
-  int count;
+  printf("Thong tin sv:\n");
   for(int i = 0; i < n; ++i){
-    int val = round(arr[i]);
-    if(arr[i] == val && (val % 3 == 0 || val % 4 == 0)){
-      sum += arr[i];
-      count++;      
-    }
+    printf("%d \t %s \t %c \t %f \n", sv[i].msv, sv[i].hoten, sv[i].khoa, sv[i].diem);
   }
-  float res = sum / count;
-  printf("%f\n", res);
   
   return 0;
 }
