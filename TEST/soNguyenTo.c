@@ -12,19 +12,19 @@ char check(int n){
 
 int main() {
   unsigned int l;
-	scanf("%d", &l);
+    scanf("%d", &l);
 
   unsigned int n[l];
   for(int i = 0; i < l; i++){
-	  scanf("%d", &n[i]);
+    scanf("%d", &n[i]);
   }
 
   for(int i = 0; i < l; i++){
-	  if(check(n[i]))
+    if(check(n[i]))
       printf("YES");
     else
       printf("NO");
-    printf("\n");
+      printf("\n");
   }  
   return 0;
 }
