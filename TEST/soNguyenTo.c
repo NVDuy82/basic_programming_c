@@ -11,13 +11,13 @@ char check(int n){
 
 int main() {
   unsigned int n;
-	printf("Nhap vao so nguyen duong n: ");
-	scanf("%d", &n);
+    printf("Nhap vao so nguyen duong n: ");
+    scanf("%d", &n);
 
   printf("%d", n);
   if(check(n))
-		printf(" la so nguyen to!");
-	else
-		printf(" khong la so nguyen to!");
+    printf(" la so nguyen to!");
+  else
+    printf(" khong la so nguyen to!");
   return 0;
 }
