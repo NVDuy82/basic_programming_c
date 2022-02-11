@@ -24,7 +24,7 @@ int main() {
       printf("YES");
     else
       printf("NO");
-      printf("\n");
+    printf("\n");
   }  
   return 0;
 }
