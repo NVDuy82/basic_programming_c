@@ -21,4 +21,3 @@ int main() {
 		printf(" khong la so nguyen to!");
   return 0;
 }
-  
