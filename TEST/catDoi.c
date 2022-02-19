@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <math.h>
+
+unsigned int lengNum(unsigned long long num){
+  return floor(log10(the_integer)) + 1;
+}
 
 void handing(unsigned long long *num, int *mod){
   *mod = *num % 10;
@@ -33,7 +38,9 @@ int main(){
   scanf("%d", &n);
   unsigned long long num[n];
   for(int i = 0; i < n; i++){
-    scanf("%llu", &num[i]);
+    do{
+      scanf("%llu", &num[i]);
+    } while (lengNum(num[i]) > 18)
   }
   for(int i = 0; i < n; i++){
     cut(num[i]);
