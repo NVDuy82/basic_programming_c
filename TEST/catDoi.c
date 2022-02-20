@@ -30,6 +30,10 @@ void cut(unsigned long long num){
     res = mod * end + res;
     end *= 10;
   }
+  if (res == 0){
+    printf("INVALID\n");
+    return;
+  }
   printf("%llu\n", res);
 }
 
