@@ -6,14 +6,16 @@ unsigned int lengNum(unsigned long long num){
 }
 
 void handing(unsigned long long *num, int *mod){
-  *mod = *num % 10;
-  *num = *num / 10;
+  *mod = *num % 10;  // get last number
+  *num = *num / 10;  // del last number
 }
 
 int cutNum(int num){
-  if (num % 8 > 1) return 2;
-  if (num == 1) return 1;
-  return 0;
+  if (num % 8 > 1) return 2;  //  cut INVALID
+
+  // remaining 0 1 8 9
+  if (num == 1) return 1;  // 1 cut into 1
+  return 0;  // 0 8 9  cut into 0
 }
 
 void cut(unsigned long long num){
@@ -27,7 +29,7 @@ void cut(unsigned long long num){
       printf("INVALID\n");
       return;
     }
-    res = mod * end + res;
+    res = mod * end + res;  // add mod to left
     end *= 10;
   }
   if (res == 0){

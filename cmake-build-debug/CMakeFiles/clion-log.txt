@@ -1,1 +1,1 @@
-CMakeLists.txt not found in C:\Users\Admin\Documents\GitHub\BasicProgramming_C Select CMakeLists.txt
+CMakeLists.txt not found in C:\Users\Admin\CLionProjects\BasicProgramming_C Select CMakeLists.txt
