@@ -14,6 +14,8 @@ void sort(int *hcn){
 int main() {
   int hcn[3][2];
   int s = 0;
+
+  // input
   for(int i = 0; i < 3; i++){
     for(int j = 0; j < 2; j++){
       scanf("%d", &hcn[i][j]);
@@ -21,6 +23,8 @@ int main() {
     s += hcn[i][0] * hcn[i][1];
     sort(hcn[i]);
   }
+
+  // output
   int edge = sqrt(s);
   if (edge == sqrt(s)){    
     if (hcn[0][1] == hcn[1][1] && hcn[1][1] == hcn[2][1] && hcn[2][1] == edge){
@@ -32,7 +36,7 @@ int main() {
           for(int j = 0; j < 2; j++){
             swap(&hcn[0][j], &hcn[i][j]);
           }
-        }        
+        }
       }
       if (hcn[0][1] == edge){        
         hcn[0][0] = edge - hcn[0][0];
