@@ -9,22 +9,15 @@ int main() {
   do{
     scanf("%d", &n);
   } while(n < 1 || 10 < n);  // enter n with  1 <= n <= 10
+
   int arr[n][n];
+  int count_0 = 0, count_1 = 0;
+
   for(int i = 0; i < n; ++i){
     for(int j = 0; j < n; ++j){
       do{
         scanf("%d", &arr[i][j]);
       } while(arr[i][j] != 0 && arr[i][j] != 1);  // enter arr[i][j] = 0 / 1
-    }
-  }
-  printf("n = %d\n", n);
-
-  int step = 0;   // output
-
-  // if number 0 < number 1  ->  swap all
-  int count_0 = 0, count_1 = 0;
-  for(int i = 0; i < n; ++i){
-    for(int j = 0; j < n; ++j){
       if(arr[i][j] == 0){
         count_0++;
       }else{
@@ -32,6 +25,11 @@ int main() {
       }
     }
   }
+  printf("n = %d\n", n);
+
+  int step = 0;   // output
+
+  // if number 0 < number 1  ->  swap all
   if(count_0 < count_1){
     //  swap...
     for(int i = 0; i < n; ++i){
